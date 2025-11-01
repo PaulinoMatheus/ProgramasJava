@@ -21,6 +21,9 @@ public class ApresentacaoIngrid {
         int[] listaBubble = listaBaguncada.clone();//Matheus L: clona a lista bagunçada para calcular o método bubble de ordenação
         int[] listaMerge = listaBaguncada.clone();// Lista para o Merge Sort - Kailaine
 
+        int[] lista = listaBaguncada.clone();
+        int[] lista3 = listaBaguncada.clone();
+
         //DORIS
         long inicioInsertion = System.nanoTime();//método para armazenar o tempo em nano segundos no momento que for chamado.
         int comparacoesInsertion = insertionSort(listaInsertion);//Método que realiza a ordenação por inserção
@@ -187,6 +190,54 @@ public static int mergeSort (int[] array, int inicio, int fim){
     // Retorna as comparações feitas no algoritmo
     return comparacoes;
 }
+
+public static int mergeSort(int[] array, int inicio, int meio, int fim){
+    int comparacoes = 0;
+    // Define o tamanho das metades
+    int tamanhoEsq = meio - inicio + 1;
+    int tamanhoDir = fim - meio;
+
+    // Define os arrays das metades
+    int [] arrayEsq = new int[tamanhoEsq];
+    int [] arrayDir = new int[tamanhoDir];
+
+    // Popula o array esquerdo com os valores correspondente do lado esquerdo da lista
+    for (int i = 0; i< tamanhoEsq;++i){
+        arrayEsq[i] = array[inicio + i];
+    }
+    // Popula o array direito com os valores correspondente do lado direito da lista
+    for (int j = 0; j < tamanhoDir; ++j){
+        arrayDir[j] = array[meio + 1 + j];
+    }
+    int i = 0, j = 0;
+    int k = inicio;
+    // Enquanto houver elementos em ambas as metades, compara e copia o menor (incrementa a variavel comparacoes)
+    while (i < tamanhoEsq && j < tamanhoDir) {
+        comparacoes++;
+
+        if (arrayEsq[i] <= arrayDir[j]){
+            array[k] = arrayEsq[i];
+            i++;
+        } else {
+            array[k]= arrayDir[j];
+            j++;
+        }
+        k++;
+    }
+    // copia os elementos restantes (não incrementa comparacoes por que não vericamos os elementos dentro dos loops)
+    while (i < tamanhoEsq){
+        array[k]= arrayEsq[i];
+        i++;
+        k++;
+}
+    while (j < tamanhoDir){
+        array[k]= arrayDir[j];
+        j++;
+        k++;
+    }
+    return comparacoes;
+}
+
 
 public static int merge(int[] array, int inicio, int meio, int fim){
     int comparacoes = 0;
