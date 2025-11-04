@@ -24,10 +24,12 @@
 <h2>
   Método Merge Sort  <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/c67c73ff-eb9f-43ae-b3e4-b6159fdb66d4" />
 </h2>
-<ol><li>Duas sublistas já ordenadas são comparadas elemento por elemento.</li>
-<li>O menor elemento de cada sublista é selecionado e colocado em uma nova lista temporária.</li>
-<li>Esse processo é repetido até que todos os elementos das duas sublistas tenham sido movidos para a lista temporária.</li>
-<li>A lista temporária, agora ordenada, substitui as duas sublistas originais. </li></ol>
+<ol><li><strong>Dividir: </strong>A lista é dividida recursivamente em duas metades, até que cada parte tenha apenas um elemento.
+E por que um só? Porque uma lista de um elemento já está ordenada, certo?</li>
+
+<li><strong>Conquistar (ou resolver): </strong> Cada parte menor é ordenada individualmente (isso já acontece naturalmente porque a recursão vai descendo até as listas mínimas).</li>
+
+<li><strong>Combinar (merge): </strong>As partes menores (já ordenadas) são mescladas em uma única lista ordenada. Esse passo é onde a mágica acontece: você compara os menores elementos de cada metade e vai colocando o menor na nova lista até acabar tudo.</li>
 <h2>
   Método Linear Search <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/ed844925-6d95-4c25-b706-a61782f49e89" />
 </h2>
