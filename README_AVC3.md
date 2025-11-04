@@ -1,7 +1,7 @@
 <h1>Projeto Métodos de Ordenação e Pesquisa - Tecnicas de Programação <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/ab8ff325-b8b7-410c-9b80-f92ed3ee778b" /> </h1> 
 
 <p>Este projeto foi desenvolvido em conjunto como atividade da disciplina de Técnicas de Programação ministrada pela Professora  <strong> Ingrid Barbosa.</strong></p>
-<p> O projeto foi desenvolvido pelos alunos: Bruno Souza Santos, Kailaiane Borges, Maria das Dores e Matheus Lucena.</p>
+<p> O projeto foi desenvolvido pelos alunos: Bruno Souza Santos, Kailaiane Borges, Maria "Doris" Soares e Matheus Lucena.</p>
 <h2>
   Método InsertionSort <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/9ec6753b-51f6-450a-a614-c4a25a0f5113" />
 </h2>
