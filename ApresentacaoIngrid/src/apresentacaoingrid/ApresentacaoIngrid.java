@@ -155,19 +155,19 @@ public class ApresentacaoIngrid {
     public static int bubbleSort(int[] lista) {
         int tamanhoLista = lista.length;
         int verificacoesComp = 0;
+        int chave = 0;
 
-        for(int i = 1; i < tamanhoLista; i++){ //Matheus L: Verifica se a condicional i percorreu todas as posições da lista
-            verificacoesComp++; //Matheus L: Registra o número de iterações feitas durante o processo de ordenação
-            int chave = lista [i];//Matheus L: Chave para armazenar o valor que será trocado na ordenação
-            int j = i-1; //Matheus L: reduz o valor do índice em 1 para selecionar a posição anterior
-
-            while (j >= 0  && lista[j] > chave) { //Matheus L: verifica se o valor de j é menor que 0 (indicando que encerrou a verificação) e se o valor na posição de j é menor que o valor armazenado na chave, indicando que é necessário realizar a substituição
-                lista [j+1] = lista [j]; // Matheus L: Caso as condições anteriores sejam verdadeiras, realiza a substituição do valor na tabela
-                j--; //Matheus L: Realiza o decremento do valor de j para seguir com a analise da próxima posição
+        for(int i = 0; i < tamanhoLista; i++){ 
+            for(int j = 0; j < tamanhoLista - i - 1;j++){
+                verificacoesComp++;
+                if(lista[j] > lista[j + 1]){
+                    chave = lista[j];
+                    lista[j] = lista[j+1];
+                    lista[j+1] = chave;
+                }
             }
-            lista[j+1] = chave; //Matheus L: Armazena a chave para que possa realizar a substituição
         }
-        return verificacoesComp; //Matheus L: armazena o número de iterações feitas dentro do código e armazena para exibir ao usuário ao final do processo
+        return verificacoesComp;
 
 
     }
